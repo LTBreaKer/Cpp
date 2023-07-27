@@ -6,7 +6,7 @@
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 23:55:04 by aharrass          #+#    #+#             */
-/*   Updated: 2023/06/17 18:40:00 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/07/12 04:21:58 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <limits>
 #include <cwctype>
 #include <cwchar>
-
+#include <cstdlib>
 
 class Phonebook	{
 	

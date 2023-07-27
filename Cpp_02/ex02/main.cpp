@@ -5,32 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/06 23:52:29 by aharrass          #+#    #+#             */
-/*   Updated: 2023/06/16 10:02:13 by aharrass         ###   ########.fr       */
+/*   Created: 2023/07/13 21:24:28 by aharrass          #+#    #+#             */
+/*   Updated: 2023/07/15 23:38:43 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "./Fixed.hpp"
 
-int main(void)
-{
-	std::string cmd;
-	Phonebook book;
-
-	while (true)
-	{
-		std::cout << "Enter one of these commands {ADD, SEARCH, EXIT}: " << std::endl;
-		std::getline(std::cin, cmd);
-		if (std::cin.eof() == 1)
-			return (0);
-		if (cmd == "ADD")
-			book.add();
-		else if (cmd == "SEARCH")
-			book.search();
-		else if (cmd == "EXIT")
-			return (0);
-		else
-			std::cout << "Wrong command" << std::endl;
-		cmd.clear();
-	}
+int main( void ) {
+	Fixed a;
+	Fixed const b( Fixed( 6.05f ) / Fixed( 2 ) );
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	// std::cout << --a << std::endl;
+	// std::cout << a << std::endl;
+	// std::cout << a-- << std::endl;
+	// std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
+	return 0;
 }

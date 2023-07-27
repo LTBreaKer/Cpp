@@ -6,7 +6,7 @@
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 20:18:43 by aharrass          #+#    #+#             */
-/*   Updated: 2023/06/18 14:17:37 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/07/26 21:15:56 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void t(void){
 	Zombie	*z;
 	z  = zombieHorde(5, "Abbas");
-	// z 	=	zombieHorde(5, "Ab");
+	z 	=	zombieHorde(5, "Ab");
 	delete [] z;
 }
 

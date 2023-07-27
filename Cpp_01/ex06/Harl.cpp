@@ -6,7 +6,7 @@
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 11:56:32 by aharrass          #+#    #+#             */
-/*   Updated: 2023/06/21 14:59:36 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/07/27 21:48:30 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ void	Harl::debug(void){
 
 void	Harl::info(void){
 	std::cout << "[INFO]" << std::endl;
-	std::cout << "I cannot believe adding extra bacon costs more money."
-						<<" You didn't put enough bacon in my burger! If you did,"
+	std::cout << "I cannot believe adding extra bacon costs more money." << std::endl;
+	std::cout << "You didn't put enough bacon in my burger! If you did,"
 						<<" I wouldn't be asking for more!" << std::endl;
 }
 
 void	Harl::warning(void){
 	std::cout << "[WARNING]" << std::endl;
-	std::cout << "I think I deserve to have some extra bacon for free."
-						<< " I've been coming for years whereas you started"
+	std::cout << "I think I deserve to have some extra bacon for free." << std::endl;
+	std::cout << "I've been coming for years whereas you started"
 						<< " working here since last month." << std::endl;
 }
 
@@ -57,13 +57,10 @@ void	Harl::complain(std::string level){
 	{
 		case 0:
 			debug();
-			break;
 		case 1:
 			info();
-			break;
 		case 2:
 			warning();
-			break;
 		case 3:
 			error();
 			break;

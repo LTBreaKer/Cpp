@@ -6,7 +6,7 @@
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 17:31:20 by aharrass          #+#    #+#             */
-/*   Updated: 2023/06/17 20:28:10 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/07/21 10:25:08 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Zombie::Zombie(std::string name) : _name(name){
 
 Zombie::~Zombie(void){
 	std::cout << _name << std::endl;
+	
 }
 
 void	Zombie::announce(void){

@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 14:28:05 by aharrass          #+#    #+#             */
-/*   Updated: 2023/07/27 19:37:52 by aharrass         ###   ########.fr       */
+/*   Created: 2023/07/13 03:15:30 by aharrass          #+#    #+#             */
+/*   Updated: 2023/07/13 21:48:14 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include <string>
 #include <iostream>
+#include <cmath>
 
-class Weapon {
+class Fixed	{
 	private:
-		std::string type;
+
+		int								_fixedValue;
+		static const int	_fractBits = 8;
+
 	public:
-		Weapon(std::string T);
-		~Weapon(void);
-		const std::string& getType(void) const;
-		void setType(std::string T);
+	
+		Fixed(void);
+		Fixed(const int i);
+		Fixed(const float f);
+		Fixed(const Fixed& orig);
+		Fixed&	operator=(const Fixed& orig);
+		~Fixed(void);
+		int		getRawBits(void)	const;
+		void	setRawBits(int const raw);
+		float	toFloat(void)	const;
+		int		toInt(void)	const;
+		
 };
+
+std::ostream&	operator<<(std::ostream& out, const Fixed& f);

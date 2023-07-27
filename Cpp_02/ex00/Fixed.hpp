@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 14:30:49 by aharrass          #+#    #+#             */
-/*   Updated: 2023/07/17 23:42:56 by aharrass         ###   ########.fr       */
+/*   Created: 2023/07/11 03:45:17 by aharrass          #+#    #+#             */
+/*   Updated: 2023/07/13 21:56:49 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Weapon.hpp"
+#include <iostream>
 
-Weapon::~Weapon(void){
-}
+class Fixed
+{
+  private:
+	
+		int _fixed_value;
+		static const int _fract_bits = 8;
 
-Weapon::Weapon(std::string T) : type(T){
-}
-
-const std::string& Weapon::getType(void) const{
-	return (type);
-}
-
-void Weapon::setType(std::string T){
-	type = T;
-	return ;
-}
+  public:
+	
+		Fixed(void);
+		Fixed(const Fixed &original);
+		Fixed&	operator=(const Fixed& orig);
+		~Fixed(void);
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
+		
+};

@@ -6,7 +6,7 @@
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:37:45 by aharrass          #+#    #+#             */
-/*   Updated: 2023/06/17 18:40:31 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/07/12 04:24:03 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void Phonebook::add(void)
 void Phonebook::search(void) const {
 	int nb = _count;
 	std::string ind;
-	unsigned long index;
+	int index;
 	
 	if (nb == 0)
 	{
@@ -67,7 +67,7 @@ void Phonebook::search(void) const {
 				return;
 			}
 		}
-		index = std::stoul(ind, NULL, 10);
+		index = std::atoi(ind.c_str());
 		if (index < 0 || (int)index >= nb)
 		{
 			std::cout << "Error: Invalid index" << std::endl;
