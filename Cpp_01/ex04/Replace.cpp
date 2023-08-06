@@ -6,12 +6,11 @@
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 17:32:14 by aharrass          #+#    #+#             */
-/*   Updated: 2023/07/17 23:24:33 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/07/30 16:49:02 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Replace.hpp"
-#include <unistd.h>
 
 Replace::Replace(std::string file_name, std::string s1, std::string s2):
 	_FileName(file_name), _s1(s1), _s2(s2){
