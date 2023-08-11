@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = ScavTrap
+NAME = FragTrap
 RM = rm -rf
 
 SR_PATH = ./
@@ -9,7 +9,8 @@ OBJ_DIR = ./obj/
 
 SR =	main.cpp	\
 			ClapTrap.cpp	\
-			ScavTrap.cpp
+			ScavTrap.cpp	\
+			FragTrap.cpp
 
 SRC = $(addprefix ${SR_PATH}, ${SR})
 OBJ = $(addprefix ${OBJ_DIR}, ${SR:.cpp=.o})

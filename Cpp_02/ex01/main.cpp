@@ -6,11 +6,12 @@
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 21:24:28 by aharrass          #+#    #+#             */
-/*   Updated: 2023/07/13 21:25:04 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/08 21:56:09 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Fixed.hpp"
+#include <iomanip>
 
 int main( void ) {
 	Fixed a;

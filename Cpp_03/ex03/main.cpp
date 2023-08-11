@@ -6,30 +6,29 @@
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 05:41:04 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/11 01:44:29 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/11 23:07:28 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ClapTrap.hpp"
+#include "./FragTrap.hpp"
+#include "./ScavTrap.hpp"
+#include "./DiamondTrap.hpp"
 
 int main(void)	{
-	ClapTrap a;
+	// ClapTrap	a("said");
+	// ScavTrap	b("hamid");
+	// FragTrap	c("khalid");
+	DiamondTrap x("jhin");
+	DiamondTrap z;
 
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.takeDamage(5);
-	a.beRepaired(1);
-	a.takeDamage(7);
-	a.beRepaired(5);
-	a.attack("gg");
+	z = x;
+	z.whoAmI();
+	z.attack("ff");
+	// b.attack("ff");
+	x.takeDamage(5);
+	// ScavTrap	f;
+	// f.takeDamage(5);
+	// f.takeDamage(5);
+	x.guardGate();
+	x.highFivesGuys();
 }
