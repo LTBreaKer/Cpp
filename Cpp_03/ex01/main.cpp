@@ -13,15 +13,15 @@
 #include "./ScavTrap.hpp"
 
 int main(void)	{
-	ClapTrap	a("said");
-	ScavTrap	b("hamid");
+	// ClapTrap	a("said");
+	ScavTrap	b;
 
-	a.attack("gg");
-	a.takeDamage(2);
-	b.attack("ff");
-	b.takeDamage(5);
-	ScavTrap	f;
-	f.takeDamage(5);
-	f.takeDamage(5);
-	f.guardGate();
+	// a.attack("gg");
+	// a.takeDamage(2);
+	// b.attack("ff");
+	// b.takeDamage(5);
+	// ScavTrap	f;
+	// f.takeDamage(5);
+	// f.takeDamage(5);
+	// f.guardGate();
 }
