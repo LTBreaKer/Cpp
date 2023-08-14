@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/13 03:39:15 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/14 01:48:18 by aharrass         ###   ########.fr       */
+/*   Created: 2023/08/14 01:04:48 by aharrass          #+#    #+#             */
+/*   Updated: 2023/08/14 01:11:27 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "./Animal.hpp"
-#include "./Brain.hpp"
+#include <iostream>
 
-class Dog : public Animal	{
+class Brain	{
 	private:
-		Brain*	B;
+		std::string ideas[100];
 	public:
-		Dog(void);
-		Dog(const Dog& orig);
-		Dog&	operator=(const Dog& orig);
-		~Dog(void);
-
-		void	makeSound(void) const;
+		Brain(void);
+		Brain(const Brain& orig);
+		Brain& operator=(const Brain& orig);
+		~Brain(void);
 };
