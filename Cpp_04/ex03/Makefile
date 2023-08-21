@@ -1,18 +1,19 @@
-CC = clang++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Zoo
+NAME = Interface
 RM = rm -rf
 
 SR_PATH = ./
 OBJ_DIR = ./obj/
 
-SR =	main.cpp	\
-			Animal.cpp	\
-			WrongAnimal.cpp	\
-			Cat.cpp	\
-			WrongCat.cpp	\
-			Dog.cpp	\
+SR =	AMateria.cpp		\
+		Ice.cpp				\
+		Cure.cpp			\
+		Character.cpp		\
+		MateriaSource.cpp	\
+		main.cpp			\
+		
 
 SRC = $(addprefix ${SR_PATH}, ${SR})
 OBJ = $(addprefix ${OBJ_DIR}, ${SR:.cpp=.o})

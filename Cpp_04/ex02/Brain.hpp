@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 21:10:32 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/17 03:39:58 by aharrass         ###   ########.fr       */
+/*   Created: 2023/08/14 01:04:48 by aharrass          #+#    #+#             */
+/*   Updated: 2023/08/14 01:11:27 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "./ClapTrap.hpp"
+#include <iostream>
 
-class	FragTrap	: public ClapTrap	{
+class Brain	{
+	private:
+		std::string ideas[100];
 	public:
-
-		FragTrap(void);
-		FragTrap(std::string name);
-		FragTrap(const FragTrap& original);
-		FragTrap&	operator=(const FragTrap& original);
-		~FragTrap(void);
-
-		void highFivesGuys(void);
-
+		Brain(void);
+		Brain(const Brain& orig);
+		Brain& operator=(const Brain& orig);
+		~Brain(void);
 };

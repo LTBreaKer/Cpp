@@ -8,11 +8,12 @@ SR_PATH = ./
 OBJ_DIR = ./obj/
 
 SR =	main.cpp	\
-			Animal.cpp	\
-			WrongAnimal.cpp	\
-			Cat.cpp	\
-			WrongCat.cpp	\
-			Dog.cpp	\
+		Animal.cpp	\
+		WrongAnimal.cpp	\
+		Cat.cpp	\
+		WrongCat.cpp	\
+		Dog.cpp	\
+		Brain.cpp
 
 SRC = $(addprefix ${SR_PATH}, ${SR})
 OBJ = $(addprefix ${OBJ_DIR}, ${SR:.cpp=.o})

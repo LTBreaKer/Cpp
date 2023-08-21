@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 21:25:27 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/10 23:06:28 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/18 10:47:23 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)	{
 	_attackDamage = 30;
 }
 
-FragTrap::FragTrap(const FragTrap& original)	{
+FragTrap::FragTrap(const FragTrap& original) : ClapTrap()	{
 	std::cout << "FragTrap copy constructor called" << std::endl;
 	*this = original;
 }
@@ -44,19 +44,10 @@ FragTrap::~FragTrap(void)	{
 	std::cout << "FragTrap destructor called" << std::endl;
 }
 
-void	FragTrap::attack(const std::string& target)	{
-	if (_hitPoints == 0)	{
-		std::cout <<  "FragTrap "<< _name << " is dead" << std::endl;
-	}
-	else if (_energyPoints)	{
-		std::cout << "FragTrap " << _name << " attacks " << target << ", causing "
-							<< _attackDamage << " points of damage!" << std::endl;
-		_energyPoints--;
-	}
-	else
-		std::cout << "FragTrap " << _name << " has no energy" << std::endl; 
-}
-
 void	FragTrap::highFivesGuys(void)	{
+	if (_hitPoints == 0)	{
+		std::cout << "FragTrap " << _name << " is dead" << std::endl;
+		return;
+	}
 	std::cout << "FragTrap " << _name << " is asking for a highfive (:" << std::endl;
 }

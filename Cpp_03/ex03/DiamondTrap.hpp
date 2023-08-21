@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 19:30:54 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/11 23:04:47 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/16 23:18:39 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "./FragTrap.hpp"
 #include "./ScavTrap.hpp"
 
-class DiamondTrap	: public FragTrap, public ScavTrap	{
+class DiamondTrap	: public ScavTrap, public FragTrap	{
 	private:
 		std::string _name;
 	

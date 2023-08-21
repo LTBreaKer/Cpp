@@ -6,7 +6,7 @@
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 03:24:43 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/15 04:01:42 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/15 04:03:31 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,9 @@ Animal&	Animal::operator=(const Animal& orig)	{
 }
 
 Animal::~Animal(void)	{
-	std::cout << "Animal efault destructor called" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 }
 
 std::string	Animal::getType(void) const	{
 	return type;
-}
-
-void	Animal::makeSound(void) const	{
-	std::cout << "Unrecognizable noises" << std::endl;
 }

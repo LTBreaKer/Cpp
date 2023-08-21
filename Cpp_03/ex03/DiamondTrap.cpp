@@ -1,12 +1,12 @@
-/* ************************************************************************** */
+ /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 04:43:56 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/11 23:06:30 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/16 23:20:20 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 DiamondTrap::DiamondTrap(void) : _name("Unkown")	{
 	std::cout << "DiamondTrap Default constructor called" << std::endl;
 	ClapTrap::_name = "Unkown_clap_name";
-	_attackDamage = 30;
+	_energyPoints = 50;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), _name(name)	{
 	std::cout << "DiamondTrap Parametrized contructor called" << std::endl;
-	_attackDamage = 30;
+	_energyPoints = 50;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& original)	{
+DiamondTrap::DiamondTrap(const DiamondTrap& original) : ClapTrap(), ScavTrap(), FragTrap()	{
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
 	*this = original;
 }

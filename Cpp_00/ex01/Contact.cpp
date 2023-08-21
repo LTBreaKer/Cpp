@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:02:10 by aharrass          #+#    #+#             */
-/*   Updated: 2023/06/18 11:55:33 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/20 13:14:18 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	Contact::fill_element(std::string prompt, std::string &var, int check){
 		std::cout << prompt;
 		std::getline(std::cin, var);
 		if (std::cin.eof() == 1)
-			exit(0);
+			return;
 		if (var.empty())
 			std::cout << "Error: Field empty, try again" << std::endl;
 		if (check == 1){

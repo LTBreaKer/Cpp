@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 21:10:32 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/17 03:39:58 by aharrass         ###   ########.fr       */
+/*   Created: 2023/08/17 04:05:58 by aharrass          #+#    #+#             */
+/*   Updated: 2023/08/17 04:34:03 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "./ClapTrap.hpp"
+#include "IMateriaSource.hpp"
 
-class	FragTrap	: public ClapTrap	{
+class MateriaSource : public IMateriaSource
+{
+	private:
+		AMateria	*stock[4];
 	public:
-
-		FragTrap(void);
-		FragTrap(std::string name);
-		FragTrap(const FragTrap& original);
-		FragTrap&	operator=(const FragTrap& original);
-		~FragTrap(void);
-
-		void highFivesGuys(void);
-
+	MateriaSource(void);
+	MateriaSource(const MateriaSource& orig);
+	MateriaSource& operator=(const MateriaSource& orig);
+	~MateriaSource();
+	void learnMateria(AMateria*);
+	AMateria* createMateria(std::string const & type);
 };

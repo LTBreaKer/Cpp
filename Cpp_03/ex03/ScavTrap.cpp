@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 15:42:43 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/10 23:06:11 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/18 10:44:36 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)	{
 	_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& original)	{
+ScavTrap::ScavTrap(const ScavTrap& original) : ClapTrap()	{
 	std::cout << "ScavTrap copy constructor called" << std::endl;
 	*this = original;
 }
@@ -58,5 +58,9 @@ void	ScavTrap::attack(const std::string& target)	{
 }
 
 void	ScavTrap::guardGate(void)	{
+	if(_hitPoints == 0)	{
+		std::cout << "ScavTrap " << _name << " is dead" << std::endl;
+		return;
+	}
 	std::cout << "ScavTrap " << _name << " is now in gate keeper mode" << std::endl; 
 }

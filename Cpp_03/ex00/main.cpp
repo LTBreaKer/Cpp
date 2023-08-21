@@ -3,30 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 05:41:04 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/11 01:44:29 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/18 09:52:39 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ClapTrap.hpp"
 
 int main(void)	{
-	ClapTrap a;
-
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
-	a.attack("jhin");
+	ClapTrap b("kai'sa");
+	ClapTrap a = b;
+	
+	a = b;
+	for (int i = 0; i < 11; i++)
+		a.attack("jhin");
 	a.takeDamage(5);
 	a.beRepaired(1);
 	a.takeDamage(7);

@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 03:41:26 by aharrass          #+#    #+#             */
-/*   Updated: 2023/07/18 03:59:13 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/18 12:25:41 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <iostream>
 
 class ClapTrap	{
 	private:
 	
 		std::string	_name;
-		int					_hitPoints;
-		int					_energyPoints;
-		int					_attackDamage;
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
 	
 	public:
 
