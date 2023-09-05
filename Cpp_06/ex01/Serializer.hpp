@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 21:24:28 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/22 12:53:12 by aharrass         ###   ########.fr       */
+/*   Created: 2023/09/04 17:27:59 by aharrass          #+#    #+#             */
+/*   Updated: 2023/09/05 17:36:24 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Point.hpp"
+#pragma once
 
-int main( void ) {
-	Point a(0, 0), b(0, 2), c(2, 2), p(0.5, 1.0);
+#include <iostream>
+#include "Data.hpp"
+#include <stdint.h>
 
-	std::cout << bsp(a, b, c, p) << std::endl;
-	return 0;
-}
+class Serializer	{
+	private:
+		Serializer();
+		Serializer(const Serializer &);
+		Serializer& operator=(const Serializer &);
+		~Serializer();
+	public:
+		static uintptr_t serialize(Data* ptr);
+		static Data* deserialize(uintptr_t raw);
+};

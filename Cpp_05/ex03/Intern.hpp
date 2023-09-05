@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 21:24:28 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/22 12:53:12 by aharrass         ###   ########.fr       */
+/*   Created: 2023/08/28 17:07:46 by aharrass          #+#    #+#             */
+/*   Updated: 2023/08/28 17:44:05 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Point.hpp"
+#pragma once
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int main( void ) {
-	Point a(0, 0), b(0, 2), c(2, 2), p(0.5, 1.0);
+class Intern	{
+	public:
+		Intern();
+		Intern(const Intern &);
+		Intern& operator=(const Intern &);
+		~Intern();
 
-	std::cout << bsp(a, b, c, p) << std::endl;
-	return 0;
-}
+		AForm* makeForm(std::string, std::string) const;
+};

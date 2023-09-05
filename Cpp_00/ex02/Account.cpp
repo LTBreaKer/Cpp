@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 01:17:04 by aharrass          #+#    #+#             */
-/*   Updated: 2023/06/17 18:15:44 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/08/22 17:04:11 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void	Account::displayStatus(void) const{
 }
 
 void	Account::_displayTimestamp( void ){
-	std::time_t tmb = time(NULL);
+	std::time_put tmb = time(NULL);
 	tm	*ltm = localtime(&tmb);
 	std::cout << "[" << 1900 + ltm->tm_year;
 	if (1 + ltm->tm_mon < 10)

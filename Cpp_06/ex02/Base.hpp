@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 21:24:28 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/22 12:53:12 by aharrass         ###   ########.fr       */
+/*   Created: 2023/09/05 17:36:08 by aharrass          #+#    #+#             */
+/*   Updated: 2023/09/05 18:11:52 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Point.hpp"
+#pragma once
 
-int main( void ) {
-	Point a(0, 0), b(0, 2), c(2, 2), p(0.5, 1.0);
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
 
-	std::cout << bsp(a, b, c, p) << std::endl;
-	return 0;
-}
+class Base	{
+	public:
+	virtual ~Base();	
+};
+
+Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);

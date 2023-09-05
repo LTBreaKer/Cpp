@@ -5,16 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 21:24:28 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/22 12:53:12 by aharrass         ###   ########.fr       */
+/*   Created: 2023/09/05 18:10:57 by aharrass          #+#    #+#             */
+/*   Updated: 2023/09/05 18:55:23 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Point.hpp"
+#include "Base.hpp"
 
-int main( void ) {
-	Point a(0, 0), b(0, 2), c(2, 2), p(0.5, 1.0);
-
-	std::cout << bsp(a, b, c, p) << std::endl;
-	return 0;
+int main()	{
+	Base *p = generate();
+	identify(p);
+	identify(*p);
 }

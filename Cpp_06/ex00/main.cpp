@@ -5,16 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 21:24:28 by aharrass          #+#    #+#             */
-/*   Updated: 2023/08/22 12:53:12 by aharrass         ###   ########.fr       */
+/*   Created: 2023/09/02 17:18:29 by aharrass          #+#    #+#             */
+/*   Updated: 2023/09/03 16:20:20 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Point.hpp"
+#include "ScalarConverte.hpp"
 
-int main( void ) {
-	Point a(0, 0), b(0, 2), c(2, 2), p(0.5, 1.0);
-
-	std::cout << bsp(a, b, c, p) << std::endl;
-	return 0;
+int main(int ac, char **av)	{
+	if (ac != 2)	{
+		std::cout << "Invalid number of arguments" << std::endl;
+		return(1);
+	}
+	ScalarConverte::convert(av[1]);
 }
