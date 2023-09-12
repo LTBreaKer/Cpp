@@ -6,7 +6,7 @@
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:10:57 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/05 18:55:23 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/06 16:27:51 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ int main()	{
 	Base *p = generate();
 	identify(p);
 	identify(*p);
+	delete p;
 }

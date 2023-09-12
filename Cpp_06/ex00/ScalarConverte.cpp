@@ -6,7 +6,7 @@
 /*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 21:49:31 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/03 20:50:30 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/06 15:17:15 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,8 @@ void	ScalarConverte::is_char(const std::string &rep)	{
 void	ScalarConverte::is_int(const std::string &rep)	{
 	long long l = atol(rep.c_str());
 	_i = atoi(rep.c_str());
-	_d = static_cast<double>(_i);
-	_f = static_cast<float>(_i);
+	_d = static_cast<double>(l);
+	_f = static_cast<float>(l);
 	if (!isascii(_i))	{
 		std::cout << "char: impossible" << std::endl;
 	}
@@ -136,7 +136,7 @@ void	ScalarConverte::is_float(const std::string &rep)	{
 		std::cout << "int: impossible" << std::endl;
 	else
 		std::cout << "int: " << _i << std::endl;
-	std::cout << std::fixed << std::setprecision(1) << "float: " << _f << "f" << std::endl;
+	std::cout << std::fixed << "float: " << _f << "f" << std::endl;
 	std::cout << "double: " << _d << std::endl;
 }
 

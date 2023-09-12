@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 17:32:14 by aharrass          #+#    #+#             */
-/*   Updated: 2023/07/30 16:49:02 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/08 17:44:38 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ Replace::~Replace(void){
 void	Replace::readFile(void){
 	std::ifstream	file;
 	
-	file.open(_FileName);
+	file.open(_FileName.c_str());
 	if (file.fail() == 1){
 		std::cout << "Error: can't open file \"" << _FileName + "\"" << std::endl;
-		exit(1);
+		return ;
 	}
 	std::getline(file, _FileContent, '\0');
 	file.close();
@@ -38,11 +38,10 @@ bool	Replace::search(size_t i) const{
 	if (i >= _FileContent.length())
 		return (false);
 	while (j < _s1.length() && i < _FileContent.length()){
-		if (_FileContent[i] != _s1[j]
-			|| (i == _FileContent.length() - 1 && j != _s1.length() - 1))
+		if (_FileContent[i] != _s1[j] || (i == _FileContent.length() - 1 && j != _s1.length() - 1))
 			return (false);
-			i++;
-			j++;
+		i++;
+		j++;
 	}
 	return (true);
 }
@@ -63,7 +62,7 @@ void	Replace::replaceContent(void){
 }
 
 void	Replace::writeNewFile(void) const{
-	std::ofstream NewFile(_NewFileName);
+	std::ofstream NewFile(_NewFileName.c_str());
 
 	NewFile << _NewFileContent;
 	NewFile.close();
