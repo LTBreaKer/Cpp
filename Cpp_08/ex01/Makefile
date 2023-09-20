@@ -1,15 +1,13 @@
-
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = GlobalBank
+NAME = prog
 RM = rm -rf
 
 SR_PATH = ./
 OBJ_DIR = ./obj/
 
-SR =	tests.cpp \
-			Account.cpp \
+SR = $(wildcard *.cpp)
 
 SRC = $(addprefix ${SR_PATH}, ${SR})
 OBJ = $(addprefix ${OBJ_DIR}, ${SR:.cpp=.o})
