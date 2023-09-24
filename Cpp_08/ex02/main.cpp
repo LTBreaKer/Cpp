@@ -6,14 +6,13 @@
 /*   By: aharrass <aharrass@student.1337.ma >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 03:11:08 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/20 01:31:31 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/24 08:14:58 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MutantStack.hpp"
 
-int main()
-{
+void test1()	{
 	MutantStack<int> mstack;
 	
 	mstack.push(5);
@@ -43,15 +42,40 @@ int main()
 	
 	std::stack<int> s(mstack);
 	
-	return 0;
+	return;
 }
-// int main()	{
-// 	std::list<int> mstack;
+
+void test2()	{
+	typedef MutantStack<std::string, std::vector<std::string> > mstack_t;
+	mstack_t ss;
+
+	ss.push("1");
+	ss.push("2");
+	ss.push("3");
+	ss.push("0");
+
+	ss.pop();
+	ss.push("4");
+	ss.push("42");
 	
-// 	mstack.push_back(1);
-// 	mstack.push_back(2);
-// 	mstack.push_back(3);
+	std::stack<std::string, std::vector<std::string> > g(ss);
 	
-// 	std::cout << "top = " << mstack.front() << std::endl;
-// 	std::cout << "begin = " << *mstack.begin() << std::endl;
-// }
+	std::cout << "top = " << g.top() << std::endl;
+	
+	std::cout << "** Reverse Iterator **" << std::endl;
+	for (mstack_t::const_reverse_iterator it = ss.rbegin(); it < ss.rend(); it++)	{
+		std::cout << *it << std::endl;
+	}
+	std::cout << "** Iterator **" << std::endl;
+	for (mstack_t::const_iterator it = ss.begin(); it < ss.end(); it++)	{
+		std::cout << *it << std::endl;
+	}
+}
+
+int main()
+{
+	std::cout << "----- Test 1 -----" << std::endl;
+	test1();
+	std::cout << "----- Test 2 -----" << std::endl;
+	test2();
+}

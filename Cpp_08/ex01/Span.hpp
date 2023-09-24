@@ -6,7 +6,7 @@
 /*   By: aharrass <aharrass@student.1337.ma >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 19:31:44 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/20 01:14:23 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/24 07:12:05 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ class Span	{
 			if (d <= _size - _arr.size())
 				std::copy(first, end, std::back_inserter(_arr));
 			else
-				throw std::runtime_error("Insufficient size");
+				throw std::runtime_error("\"megaAdd\" Insufficient size");
 		}
 };

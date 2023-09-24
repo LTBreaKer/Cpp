@@ -6,7 +6,7 @@
 /*   By: aharrass <aharrass@student.1337.ma >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 19:36:40 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/18 23:31:10 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/24 07:11:52 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ Span::~Span()	{
 
 void	Span::addNumber(int i)	{
 	if (_arr.size() == _size)
-		throw std::runtime_error("Size is too small");
+		throw std::runtime_error("\"addNumber\" Can't add a number: Size too small");
 	_arr.push_back(i);
 }
 
 int	Span::longestSpan()	{
 	if (_arr.size() < 2)
-		throw std::runtime_error("Size too small");
+		throw std::runtime_error("\"longestSpan\" Can't look for a span: Size too small");
 		
 	std::vector<int> tmp(_arr);
 	
@@ -50,7 +50,7 @@ int	Span::longestSpan()	{
 
 int Span::shortestSpan()	{
 	if (_arr.size() < 2)
-		throw std::runtime_error("Size too small");
+		throw std::runtime_error("\"shortestSpan\" Can't look for a span: Size too small");
 	
 	std::vector<int> tmp(_arr);
 	
