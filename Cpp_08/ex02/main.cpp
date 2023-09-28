@@ -6,7 +6,7 @@
 /*   By: aharrass <aharrass@student.1337.ma >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 03:11:08 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/24 08:14:58 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/27 09:59:26 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void test1()	{
 
 void test2()	{
 	typedef MutantStack<std::string, std::vector<std::string> > mstack_t;
-	mstack_t ss;
+	mstack_t ss; 
 
 	ss.push("1");
 	ss.push("2");
@@ -63,11 +63,11 @@ void test2()	{
 	std::cout << "top = " << g.top() << std::endl;
 	
 	std::cout << "** Reverse Iterator **" << std::endl;
-	for (mstack_t::const_reverse_iterator it = ss.rbegin(); it < ss.rend(); it++)	{
+	for (mstack_t::reverse_iterator it = ss.rbegin(); it != ss.rend(); it++)	{
 		std::cout << *it << std::endl;
 	}
 	std::cout << "** Iterator **" << std::endl;
-	for (mstack_t::const_iterator it = ss.begin(); it < ss.end(); it++)	{
+	for (mstack_t::iterator it = ss.begin(); it != ss.end(); it++)	{
 		std::cout << *it << std::endl;
 	}
 }

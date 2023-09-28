@@ -6,7 +6,7 @@
 /*   By: aharrass <aharrass@student.1337.ma >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 02:08:57 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/24 08:12:25 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/27 09:47:12 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <list>
 #include <vector>
 #include <queue>
+#include <set>
 
 template<typename T, typename container = std::deque<T> >
 class MutantStack : public std::stack<T, container>	{
