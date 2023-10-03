@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aharrass <aharrass@student.1337.ma >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 15:38:02 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/29 15:11:09 by aharrass         ###   ########.fr       */
+/*   Created: 2023/09/29 18:43:03 by aharrass          #+#    #+#             */
+/*   Updated: 2023/09/30 16:33:31 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once 
 #include <iostream>
-#include <map>
+#include <stack>
 #include <iomanip>
 #include <fstream>
 #include <string>
@@ -20,24 +20,5 @@
 #include <cctype>
 #include <exception>
 
-class Btc	{
-	
-	private:
-	
-		std::map<std::string, float> _dataBase;
-		std::string _fileName;
-
-	public:
-		
-		Btc();
-		Btc(const std::string);
-		Btc(const Btc &);
-		Btc& operator=(const Btc &);
-		~Btc();
-		
-		void	fillDataBase();
-		void	checkDate(std::pair<std::string, float>, unsigned int, unsigned int, std::string) const;
-		void	parseDate(std::string, std::string, int, int) const;
-		void	printResult(std::pair<std::string, float> &, std::string &) const;
-		void	parseFile() const;
-};
+void	populateStack(std::stack<int> &, std::string);
+void	calculate(std::stack<int> &, char);

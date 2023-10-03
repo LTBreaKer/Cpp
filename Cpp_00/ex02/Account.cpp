@@ -6,7 +6,7 @@
 /*   By: aharrass <aharrass@student.1337.ma >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 01:17:04 by aharrass          #+#    #+#             */
-/*   Updated: 2023/09/20 08:25:38 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/29 13:43:33 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void	Account::displayStatus(void) const{
 }
 
 void	Account::_displayTimestamp( void ){
-	std::time_put tmb = time(NULL);
+	time_t tmb = time(NULL);
 	tm	*ltm = localtime(&tmb);
 	std::cout << "[" << 1900 + ltm->tm_year;
 	if (1 + ltm->tm_mon < 10)

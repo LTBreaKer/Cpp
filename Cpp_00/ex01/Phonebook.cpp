@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aharrass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aharrass <aharrass@student.1337.ma >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:37:45 by aharrass          #+#    #+#             */
-/*   Updated: 2023/07/12 04:24:03 by aharrass         ###   ########.fr       */
+/*   Updated: 2023/09/29 18:38:43 by aharrass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void Phonebook::search(void) const {
 		return;
 	}
 	std::cout << "***********|**********|**********|***********" << std::endl
-						<< "*  Index   |First name|Last name | Nickname *" << std::endl
-						<< "***********|**********|**********|***********" << std::endl;
+			  << "*  Index   |First name|Last name | Nickname *" << std::endl
+			  << "***********|**********|**********|***********" << std::endl;
 	if (_count > 8)
 		nb = 8;
 	for (int i = 0; i < nb; i++)
